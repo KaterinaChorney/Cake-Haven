@@ -1,57 +1,161 @@
-body {
-    font-family: Arial, sans-serif;
+body {    
+    font-family: Arial, sans-serif;    
+    margin: 0;    
+    padding: 0;    
+    color: #d6336c;
+}
+header {    
+    background-color: #ffb6c1;    
+    padding: 20px;    
+    text-align: center;    
+    color: #fff;    
+    font-size: 1.2em;    
+    border-radius: 0 0 10px 10px;
+}
+header h1 {    
     margin: 0;
+}
+nav ul {    
+    list-style: none;    
     padding: 0;
 }
-header {
-    background-color: #ffb6c1;
-    padding: 20px;
-    text-align: center;
-}
-header h1 {
-    margin: 0;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
+nav ul li {    
+    display: inline;    
     margin: 0 10px;
 }
-nav ul li a {
-    text-decoration: none;
-    color: #333;
+nav ul li a {    
+    text-decoration: none;    
+    color: #fff;    
+    font-weight: bold;
 }
-.hero {
-    background-image: url('sweets.jpg');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
+.hero, .menu, .about, .contact, .highlight {    
+    padding: 20px;    
+    text-align: center;    
+    background-color: #ffebef;  
+    border-radius: 10px;    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.menu {
-    display: flex;
-    flex-wrap: wrap;
+.menu {    
+    display: flex;    
+    flex-wrap: wrap;    
     justify-content: center;
     gap: 20px;
-    padding: 20px;
 }
-.menu-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.menu-item {    
+    background-color: #fff;    
+    border: 1px solid #ddd;    
+    border-radius: 10px;    
+    overflow: hidden;    
+    width: 300px;    
+    text-align: center;    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);    
+    position: relative;    
+    height: 350px; 
 }
-.menu-item img {
-    width: 100%;
+.menu-item img {    
+    width: 100%;    
     height: auto;
 }
-footer {
-    background-color: #ffb6c1;
-    padding: 20px;
-    text-align: center;
+.menu-item h3 {    
+    margin: 0;    
+    padding: 10px;    
+    background-color: rgba(255, 182, 193, 0.8);   
+    color: #fff;    
+    position: absolute;    
+    bottom: 50px;  
+    width: 100%;
+}
+.menu-item p {    
+    margin: 0;    
+    padding: 10px;    
+    background-color: #fff;    
+    color: #d6336c;    
+    position: absolute;    
+    bottom: 0;    
+    width: 100%;
+}
+footer {    
+    background-color: #ffb6c1;  
+    padding: 20px;    
+    text-align: center;    
+    color: #fff;    
+    border-radius: 10px 10px 0 0; 
+}
+.highlight-container {    
+    display: grid;    
+    grid-template-columns: 1fr 1fr;    
+    width: 80%;    
+    margin: 0 auto; 
+    border-radius: 10px;    
+    overflow: hidden;
+}
+.highlight-text {    
+    background-color: #ffb6c1;    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    padding: 20px;    
+    border-radius: 10px 0 0 10px; 
+}
+.highlight-link {    
+    color: #fff; /* Білий текст */    
+    text-decoration: none;    
+    font-size: 1em;
+}
+.highlight-link:hover {    
+    text-decoration: underline;
+}
+.highlight-image img {    
+    width: 100%;    
+    height: auto;    
+    border-radius: 0 10px 10px 0; 
+}
+.about {    
+    background-color: #ffb6c1;   
+    color: #fff;    
+    border-radius: 10px;
+}
+.contact ul {    
+    list-style: none;    
+    padding: 0;
+}
+.contact li {    
+    margin-bottom: 5px;    
+    display: flex;    
+    align-items: center;
+}
+.contact li:before {    
+    content: '📞';    
+    margin-right: 10px;
+}
+.contact li:nth-child(2):before {    
+    content: '✉️';
+}
+.contact li:nth-child(3):before {    
+    content: '🏠'; 
+}
+@media (max-width: 768px) {    
+    nav ul {        
+        display: flex;        
+        flex-direction: column;        
+        align-items: center;        
+        gap: 10px;    
+    }    
+    .highlight-container {        
+        grid-template-columns: 1fr;    
+    }    
+    .menu-item {        
+        width: 90%;    
+    }
+}
+@media (max-width: 480px) {    
+    header, .hero, .about, .contact {        
+        padding: 10px;    
+    }    
+    .hero h2, .menu-item h3, .highlight-text h2 {        
+        font-size: 1.5em;    
+    }    
+    .menu-item p, .contact p, .about p {        
+        font-size: 1em;    
+    }
 }
